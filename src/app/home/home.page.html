@@ -1,0 +1,85 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="custom-text-size">
+      Mi Estacionamiento
+    </ion-title>
+    <i class="custom-i">El estacionamiento que buscas
+    </i>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-title style="padding-top: 10px;">Bienvenido, {{ receivedUsername }}!</ion-title>
+  
+
+  <ion-segment [(ngModel)]="selectedSegment">
+    <ion-segment-button value="mis-datos">
+      <ion-label>Mis Datos <ion-icon name="person"></ion-icon></ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="experiencia-laboral">
+      <ion-label>Ficha laboral <ion-icon name="briefcase"></ion-icon></ion-label>
+    </ion-segment-button>
+  </ion-segment>
+    <ion-segment [(ngModel)]="selectedSegment">
+    <ion-segment-button value="certificaciones">
+      <ion-label>Certificaciones <ion-icon name="folder-open"></ion-icon></ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="usuariosfirebase">
+      <ion-label>Nuevo Usuario <ion-icon name="person-add"></ion-icon></ion-label>
+    </ion-segment-button>
+  </ion-segment>
+    <ion-segment [(ngModel)]="selectedSegment">
+  <ion-segment-button value="api-rest">
+    <ion-label>Lista de Usuarios <ion-icon name="list"></ion-icon></ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="qr-scanner">
+    <ion-label>Código QR <ion-icon name="camera"></ion-icon></ion-label>
+  </ion-segment-button>
+</ion-segment>
+    <!-- Mostrar componentes según el valor seleccionado en el segmento -->
+    <ng-container *ngIf="selectedSegment === 'mis-datos'">
+      <app-mis-datos></app-mis-datos>
+    </ng-container>
+    <ng-container *ngIf="selectedSegment === 'experiencia-laboral'">
+      <app-experiencia-laboral></app-experiencia-laboral>
+    </ng-container>
+    <ng-container *ngIf="selectedSegment === 'certificaciones'">
+      <app-certificaciones></app-certificaciones>
+    </ng-container>
+    <ng-container *ngIf="selectedSegment === 'usuariosfirebase'">
+      <app-usuariosfirebase></app-usuariosfirebase>
+    </ng-container>
+    <ng-container *ngIf="selectedSegment === 'api-rest'">
+      <app-api-rest></app-api-rest>
+    </ng-container>
+    <ng-container *ngIf="selectedSegment === 'qr-scanner'">
+      <app-qr-scanner></app-qr-scanner>
+    </ng-container>
+
+
+<ion-item>
+      
+          <ion-button [routerLink]="['/login']"><ion-icon name="person-outline"></ion-icon>Iniciar Sesión</ion-button>
+        
+
+      
+          <ion-button [routerLink]="['/buscar']"><ion-icon name="search-outline"></ion-icon> Buscar</ion-button>
+        
+   
+</ion-item>
+
+<ion-item>
+  
+      <ion-button><ion-icon name="information-outline"></ion-icon>Información</ion-button>  
+    
+
+  
+      <ion-button><ion-icon name="logo-whatsapp"></ion-icon> Contacto</ion-button>
+    
+
+</ion-item>
+
+  
+</ion-content>
+
+

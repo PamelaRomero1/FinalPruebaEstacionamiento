@@ -1,0 +1,20 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title >Experiencia Laboral</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<form (ngSubmit)="guardarExperienciaLaboral()">
+  <label>Empresa</label>
+  <input type="text" name="empresa" [(ngModel)]="experienciaLaboral.empresa"> <br>
+  <br>
+  <label>Año inicio</label>
+  <input type="number" name="anoInicio" [(ngModel)]="experienciaLaboral.anoInicio"> <br>
+  <br>
+  <label>Año término</label>
+  <input type="number" name="anoTermino" [(ngModel)]="experienciaLaboral.anoTermino"> <br>
+  <br>
+  <label>Cargo</label>
+  <input type="text" name="cargo" [(ngModel)]="experienciaLaboral.cargo"> <br>
+  <ion-button type="submit" style="padding-left: 150px;">Guardar</ion-button>
+</form>

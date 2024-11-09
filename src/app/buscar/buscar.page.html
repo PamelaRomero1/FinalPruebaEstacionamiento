@@ -1,0 +1,36 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar>
+    <ion-icon [routerLink]="['/home']" class="costum-icon" name="home-outline" size="large"></ion-icon><ion-title class="costum-title">Buscar estacionamiento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="centered-content">
+  <ion-input style="margin-bottom: -15px;" id="region" label="Región" labelPlacement="floating" [counter]="true" maxlength="30"></ion-input>
+  <ion-input id="comuna" label="Comuna" labelPlacement="floating" [counter]="true" maxlength="30"></ion-input>
+  <ion-input style="margin-top: -15px;" id="direccion" label="Dirección" labelPlacement="floating" [counter]="true" maxlength="30"></ion-input>
+  
+  <ion-item>
+    <ion-input label="Rango Horario"></ion-input><ion-select  class="select" placeholder="Selecciona uno...">
+      <ion-select-option value="hora1">6:00 - 18:00</ion-select-option>
+      <ion-select-option value="hora2">18:01 - 23:59</ion-select-option>
+    </ion-select> 
+  </ion-item>
+  
+  <ion-item>
+    <ion-input label="Tipo de estacionamiento"></ion-input><ion-select class="select" placeholder="Seleccione uno..." >
+      <ion-select-option value="casa">Casa</ion-select-option>
+      <ion-select-option value="edifre">Edificio residencial</ion-select-option>
+      <ion-select-option value="edifco">Edificio comercial</ion-select-option>
+    </ion-select> 
+  </ion-item>
+  <ion-item>
+    <ion-input label="Tipo de Pago"></ion-input><ion-select  class="select" placeholder="Selecciona uno...">
+      <ion-select-option value="credito">Crédito</ion-select-option>
+      <ion-select-option value="debito">Débito</ion-select-option>
+    </ion-select> 
+  </ion-item>
+
+  <ion-button [routerLink]="['/mapa']">Ver estacionamientos cercanos</ion-button>
+</div>
+</ion-content>

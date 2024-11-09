@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon [routerLink]="['/home']" class="costum-icon" name="home-outline" size="large"></ion-icon><ion-title class="costum-title">Datos del arrendatario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="centered-content">
+  <ion-input style="margin-top: 40px;" id="nom_arriendo" label="Nombre" labelPlacement="floating" [counter]="true" maxlength="12"></ion-input>
+  <ion-input id="ap_arriendo" label="Apellido" labelPlacement="floating" [counter]="true" maxlength="12"></ion-input>
+  <ion-input id="mail" label="Correo electrónico" labelPlacement="floating" [counter]="true" maxlength="30"></ion-input>
+  <ion-input id="direccion" label="Dirección" labelPlacement="floating" [counter]="true" maxlength="30"></ion-input>
+
+  <ion-input id="tarifa" label="Tarifa por hora" labelPlacement="floating" [counter]="true"  maxlength="12"></ion-input>
+  <ion-input  id="banco" label="Cuenta bancaria" labelPlacement="floating" [counter]="true" maxlength="30"></ion-input>
+
+  <ion-item>
+    <ion-input label="Tipo de estacionamiento"></ion-input><ion-select class="select" placeholder="Seleccione un tipo" >
+      <ion-select-option value="casa">Casa</ion-select-option>
+      <ion-select-option value="edire">Edificio residencial</ion-select-option>
+      <ion-select-option value="edico">Edificio comercial</ion-select-option>
+    </ion-select> 
+  </ion-item>
+  <ion-checkbox>Acepto los términos y condiciones</ion-checkbox>
+
+  <ion-button style="margin-top: 15px;" [routerLink]="['/home']" >Registrar datos</ion-button>
+
+  
+</div>
+</ion-content>

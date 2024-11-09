@@ -1,0 +1,30 @@
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    padding: 16px;
+}
+
+ion-button {
+    --background: #ffffff;
+    --background-hover: #2f00ff;
+  
+    --color: rgb(0, 0, 0);
+  
+    --border-radius: 0;
+    --border-color: #000;
+    --border-style: solid;
+    --border-width: 2px;
+  
+    --ripple-color: rgb(20, 36, 255);
+  
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  
+    width: 100%; 
+    max-width: 400px; 
+    
+  }
+  

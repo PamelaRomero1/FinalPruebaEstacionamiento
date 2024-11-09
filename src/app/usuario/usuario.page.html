@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon [routerLink]="['/home']" class="costum-icon" name="home-outline" size="large"></ion-icon><ion-title class="costum-title">Datos del usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="centered-content">
+  <ion-input id="nom_usuario" label="Nombre" labelPlacement="floating" [counter]="true" maxlength="20"></ion-input>
+  <ion-input id="ap_usuario" label="Apellido" labelPlacement="floating" [counter]="true" maxlength="20"></ion-input>
+  <ion-input id="correo_usuario" label="Correo electrónico" labelPlacement="floating" [counter]="true" maxlength="50"></ion-input>
+  <ion-input id="patente" label="Patente" labelPlacement="floating" [counter]="true" maxlength="10"></ion-input>
+  <ion-input  id="banco" label="Cuenta bancaria" labelPlacement="floating" [counter]="true" maxlength="30"></ion-input>
+  <ion-checkbox>Acepto los términos y condiciones</ion-checkbox>
+
+  <ion-button style="margin-top: 20px;" [routerLink]="['/home']">Registrar datos</ion-button>
+
+  
+</div>
+</ion-content>

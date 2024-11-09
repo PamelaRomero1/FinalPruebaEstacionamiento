@@ -1,0 +1,39 @@
+<ion-toolbar>
+  <ion-icon [routerLink]="['/home']" class="costum-icon" name="home-outline" size="large"></ion-icon><ion-title class="custom-text-size">
+    Mi Estacionamiento
+  </ion-title>
+  <i class="custom-i">El estacionamiento que buscas
+  </i>
+</ion-toolbar>
+
+
+<ion-content [fullscreen]="true">
+<div class="centered-content" >
+  <ion-title>Ingresar datos</ion-title>
+  <ion-input id="usuario" label="Usuario" labelPlacement="floating" [counter]="true" minlength="3" maxlength="8"></ion-input>
+
+  
+
+  <ion-input
+    id="custom-input"
+    label="Password"
+    type="password"
+    labelPlacement="floating"
+    [counter]="true"
+    maxlength="4"
+    
+  
+  ></ion-input>
+
+  <ion-item>
+    <ion-input label="Tipo de usuario"></ion-input><ion-select  [(ngModel)]="selectedRole" class="select" placeholder="Selecciona uno...">
+      <ion-select-option value="arriendo">Arrendo mi estacionamiento</ion-select-option>
+      <ion-select-option value="busco">Busco un estacionamiento</ion-select-option>
+    </ion-select> 
+  </ion-item>
+  
+  <ion-button style="margin-bottom: -15px;" class="Custom Buttom" expand="full" (click)="navigateBasedOnRole()">Registrarme</ion-button>
+  <hr>
+  
+</div>
+</ion-content>

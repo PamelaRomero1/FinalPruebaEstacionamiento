@@ -1,0 +1,57 @@
+<ion-content>
+  <!-- Reemplazo de mat-toolbar por ion-header y ion-toolbar -->
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Lista de Usuarios</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Formulario de usuarios -->
+  <form (ngSubmit)="editingUser ? saveUser() : addUser()">
+    <!-- Reemplazo de mat-form-field por ion-item e ion-input -->
+    <ion-item>
+      <ion-label position="floating">Id</ion-label>
+      <ion-input [(ngModel)]="newUser.id" name="id" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="newUser.name" name="name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input [(ngModel)]="newUser.email" name="email" required></ion-input>
+    </ion-item>
+
+    <!-- Reemplazo de mat-button por ion-button -->
+    <ion-button expand="block"  type="submit" class="boton-usuario">
+      {{ editingUser ? 'Guardar Cambios' : 'Agregar Nuevo Usuario' }}
+    </ion-button>
+  </form>
+  <br>
+  <!-- Reemplazo de mat-list por ion-list -->
+   
+  <ion-list>
+    <ion-item *ngFor="let user of users">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ user.name }}</ion-card-title>
+        </ion-card-header>
+        
+        <ion-card-content>
+          <p>ID: {{ user.id }}</p>
+          <p>Correo: {{ user.email }}</p>
+        </ion-card-content>
+
+        <ion-button expand="full" color="primary" (click)="updateUser(user)">
+          Actualizar
+        </ion-button>
+        <ion-button expand="full" color="danger" (click)="deleteUser(user.id)">
+          Eliminar
+        </ion-button>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

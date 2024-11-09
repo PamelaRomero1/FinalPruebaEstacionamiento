@@ -1,0 +1,22 @@
+.boton-usuario{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+ion-button {
+    --background: #000000;
+    --background-hover: #ff00bf;
+  
+    --color: rgb(238, 228, 142);
+  
+    --border-radius: 0;
+    --border-color: #000;
+    --border-style: solid;
+    --border-width: 2px;
+  
+    --ripple-color: rgb(255, 20, 165);}
+
+    ion-toolbar{
+        --background: #000000;
+        --color: rgb(238, 228, 142);
+    }
