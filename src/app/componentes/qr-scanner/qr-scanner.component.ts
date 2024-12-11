@@ -31,17 +31,8 @@ export class QrScannerComponent  implements OnInit {
       }
     }
   }
-  descargarQR() {
-    if (this.scannedData) {
-      const blob = new Blob([this.scannedData], { type: 'text/plain' });
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'qr-code.txt';
-      a.click();
-      window.URL.revokeObjectURL(url);
-    }
-  }
+
+  
   // Función para validar si el contenido escaneado es una URL válida
   isValidUrl(url: string): boolean {
     const urlPattern = new RegExp('^(https?:\\/\\/)?'+ // protocolo
@@ -54,15 +45,20 @@ export class QrScannerComponent  implements OnInit {
   }
   // Función para generar código QR
   generateQRCode() {
-    QRCode.toDataURL(this.qrCodeData, { errorCorrectionLevel: 'H' })
-      .then((url: string) => {
-        this.generatedQRCode = url;
-      })
-      .catch((err: any) => {
-        console.error(err);
-      });
+    this.qrCodeData = 'https://docs.google.com/forms/d/e/1FAIpQLSfCLZEl8ECZhpB_LZBf2on3h0Mr_Jkct7R2v1K9lK9IH_0YVg/viewform?vc=0&c=0&w=1&flr=0';
+
+QRCode.toDataURL(this.qrCodeData, { errorCorrectionLevel: 'H' })
+  .then((url: string) => {
+    this.generatedQRCode = url;
+  })
+  .catch((err: any) => {
+    console.error(err);
+  });
   }
 
+  
+
+ 
   ngOnInit() {}
 
 }
