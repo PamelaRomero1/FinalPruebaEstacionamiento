@@ -3,10 +3,11 @@
     padding-right: 30px;
 }
 ion-button {
-    --background: #000000;
+    
     --background-hover: #ff00bf;
   
-    --color: rgb(238, 228, 142);
+    --background: #bebebe;
+    --color: rgb(42, 50, 93);
   
     --border-radius: 0;
     --border-color: #000;
@@ -16,6 +17,6 @@ ion-button {
     --ripple-color: rgb(255, 20, 165);}
 
     ion-toolbar{
-        --background: #000000;
-        --color: rgb(238, 228, 142);
+        --background: #bebebe;
+        --color: rgb(42, 50, 93);
     }

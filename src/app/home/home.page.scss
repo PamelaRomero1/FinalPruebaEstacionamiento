@@ -46,10 +46,11 @@ ion-input {
 }
 
 ion-button {
-  --background: #000000;
+  
   --background-hover: #2f00ff;
 
-  --color: rgb(238, 228, 142);
+  --background: #bebebe;
+  --color: rgb(42, 50, 93);
 
   --border-radius: 0;
   
@@ -90,7 +91,7 @@ ion-segment-button{
 }
 
 ion-toolbar{
-  --background: #000000;
-  --color: rgb(238, 228, 142);
+  --background: #bebebe;
+  --color: rgb(42, 50, 93);
 }
 
